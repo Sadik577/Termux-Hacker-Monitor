@@ -8,8 +8,8 @@
 ```
 pkg update && pkg upgrade -y
 pkg install nodejs git -y
-git clone https://github.com/Sadik577/Termux-Hacker-Monitor
 npm install chalk@4.1.2 cli-progress
+git clone https://github.com/Sadik577/Termux-Hacker-Monitor
 node index.js
 ```
 
