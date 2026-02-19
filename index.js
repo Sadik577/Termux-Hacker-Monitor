@@ -33,14 +33,14 @@ const progressBar = new _progress.SingleBar({
 
 async function startHackerTool() {
     console.log("");
-    progressBar.start(100, 0);
+    progressBar.start(1000, 0);
     let value = 0;
 
     const timer = setInterval(() => {
-        value += 5;
+        value += 2;
         progressBar.update(value);
 
-        if (value >= 100) {
+        if (value >= 10) {
             clearInterval(timer);
             progressBar.stop();
             showDetails();
