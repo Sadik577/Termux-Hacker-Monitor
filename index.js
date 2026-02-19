@@ -13,7 +13,7 @@ console.log(chalk.red.bold(`
 // ২. 
 let count = 60;
 const countdown = setInterval(() => {
-    process.stdout.write(`\r${chalk.yellow.bold("[!]")} ${chalk.white("SYSTEM IS UNLOCKING 👉: ")} ${chalk.red.bold(count)} ${chalk.white("সেকেন্ড বাকি...")}`);
+    process.stdout.write(`\r${chalk.yellow.bold("[!]")} ${chalk.white("SYSTEM IS UNLOCKING 👉: ")} ${chalk.red.bold(count)} ${chalk.white("SECOND LEFT...")}`);
     count--;
 
     if (count < 0) {
