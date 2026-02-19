@@ -2,7 +2,6 @@ const chalk = require('chalk');
 const _progress = require('cli-progress');
 const os = require('os');
 
-// ১. স্ক্রিন ক্লিয়ার এবং হ্যাকার হেডার
 console.clear();
 console.log(chalk.red.bold(`
 ╔════════════════════════════════════════════╗
@@ -11,22 +10,22 @@ console.log(chalk.red.bold(`
 ╚════════════════════════════════════════════╝
 `));
 
-// ২. ১০ সেকেন্ডের কাউন্টডাউন ফাংশন
-let count = 10;
+// ২. 
+let count = 60;
 const countdown = setInterval(() => {
-    process.stdout.write(`\r${chalk.yellow.bold("[!]")} ${chalk.white("সিস্টেম আনলক হচ্ছে: ")} ${chalk.red.bold(count)} ${chalk.white("সেকেন্ড বাকি...")}`);
+    process.stdout.write(`\r${chalk.yellow.bold("[!]")} ${chalk.white("SYSTEM IS UNLOCKING 👉: ")} ${chalk.red.bold(count)} ${chalk.white("সেকেন্ড বাকি...")}`);
     count--;
 
     if (count < 0) {
         clearInterval(countdown);
-        console.log("\n" + chalk.green.bold("\n[+] এক্সেস গ্রান্টেড! পেলোড ইনজেক্ট করা হচ্ছে..."));
+        console.log("\n" + chalk.green.bold("\n[+] ACCESS GRANTED 🥰! SYSTEM CHAKING 🌐..."));
         startHackerTool();
     }
 }, 1000);
 
-// ৩. প্রগ্রেস বার (Loading Animation)
+// ৩.  (Loading Animation)
 const progressBar = new _progress.SingleBar({
-    format: chalk.cyan('প্রসেসিং: ') + chalk.green('{bar}') + ' | {percentage}% | {value}/{total}',
+    format: chalk.cyan('PROCESSING: ') + chalk.green('{bar}') + ' | {percentage}% | {value}/{total}',
     barCompleteChar: '\u2588',
     barIncompleteChar: '\u2591',
     hideCursor: true
@@ -49,17 +48,17 @@ async function startHackerTool() {
     }, 100);
 }
 
-// ৪. ফোনের ডিটেইলস দেখানো
+// ৪. All the details of the phone 🌐🌍
 function showDetails() {
-    console.log("\n" + chalk.blue.bold("--- টার্গেট ডিভাইস লগ ---"));
+    console.log("\n" + chalk.blue.bold("--- Target Device Lock ⚙️ ---"));
     
     const details = [
-        `> আইপি অ্যাড্রেস : ${Math.floor(Math.random() * 255)}.168.1.${Math.floor(Math.random() * 255)}`,
-        `> প্রসেসর আর্কিটেকচার : ${os.arch()}`,
-        `> প্ল্যাটফর্ম : ${os.platform()}`,
-        `> সিস্টেম র‍্যাম : ${(os.totalmem() / 1024 / 1024 / 1024).toFixed(2)} GB`,
-        `> ব্যাটারি স্ট্যাটাস : ${chalk.bgGreen.black(" চার্জিং ")}`,
-        `> স্ট্যাটাস : ${chalk.bgRed.white(" হ্যাকড সফল ")}`
+        `> IP ADDRESS : ${Math.floor(Math.random() * 255)}.168.1.${Math.floor(Math.random() * 255)}`,
+        `> PROCESS EXECUTIVE : ${os.arch()}`,
+        `> PLATFORM : ${os.platform()}`,
+        `> SYSTEM RAM : ${(os.totalmem() / 1024 / 1024 / 1024).toFixed(2)} GB`,
+        `> BATTERY STATUS : ${chalk.bgGreen.black(" CHARGING ")}`,
+        `> STATUS : ${chalk.bgRed.white(" ACCORD SUCCESS ")}`
     ];
 
     let i = 0;
@@ -74,17 +73,17 @@ function showDetails() {
     }, 500);
 }
 
-// ৫. লাইভ নেটওয়ার্ক অ্যানিমেশন
+
 function liveNetworkMonitor() {
     const frames = ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"];
     let x = 0;
-    console.log("\n" + chalk.magenta.bold("--- লাইভ নেটওয়ার্ক মনিটর ---"));
+    console.log("\n" + chalk.magenta.bold("--- LIVE NET WORTH MONITOR ---"));
     
     setInterval(() => {
         let speed = (Math.random() * 25).toFixed(2);
         let packets = Math.floor(Math.random() * 5000);
         process.stdout.write(
-            `\r${chalk.cyan(frames[x])}  ${chalk.white("স্পিড:")} ${chalk.green(speed + " Mbps")} | ${chalk.white("প্যাকেট:")} ${chalk.yellow(packets + " Pkts/s")}`
+            `\r${chalk.cyan(frames[x])}  ${chalk.white("SPEED:")} ${chalk.green(speed + " Mbps")} | ${chalk.white("PACKAGE:")} ${chalk.yellow(packets + " Pkts/s")}`
         );
         x = (x + 1) % frames.length;
     }, 100);
