@@ -11,7 +11,7 @@ console.log(chalk.red.bold(`
 `));
 
 // ২. 
-let count = 60;
+let count = 20;
 const countdown = setInterval(() => {
     process.stdout.write(`\r${chalk.yellow.bold("[!]")} ${chalk.white("SYSTEM IS UNLOCKING 👉: ")} ${chalk.red.bold(count)} ${chalk.white("SECOND LEFT...")}`);
     count--;
@@ -40,7 +40,7 @@ async function startHackerTool() {
         value += 2;
         progressBar.update(value);
 
-        if (value >= 10) {
+        if (value >= 10000) {
             clearInterval(timer);
             progressBar.stop();
             showDetails();
